@@ -1,2 +1,2 @@
 # Dragon-Fractal
-Draws the dragon curve.
+Python code that draws the dragon curve using the turtle library.
