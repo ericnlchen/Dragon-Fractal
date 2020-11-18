@@ -1,17 +1,22 @@
 import turtle
+import random
 '''
 n=0   0==>2
 e=1   1==>0
 w=2   2==>3
 s=3   3==>1
 '''
+turtle.colormode(255)
 t1=turtle.Turtle()
 t1.speed(100)
-segmentLength=10
+t1.hideturtle()
+t1.pensize(4)
+segmentLength=20
 prev=[]
 current=[]
 
 def north():
+ t1.pencolor(random.randint(100,240), random.randint(100,240), random.randint(100,240))
  t1.setheading(90)
  t1.forward(segmentLength)
  prev.append(0)
@@ -55,13 +60,21 @@ def go(l):
      elif l[x]==3:
        south()
      x=x+1
-
+'''
 def dragon():
  current=transform(prev)
  current.reverse()
  go(current)
  dragon()
 dragon()
+'''
+
+while(True):
+ current=transform(prev)
+ current.reverse()
+ go(current)
+ 
+
 
 #end
 
